@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>e-Kinerja – Perencanaan Kinerja</title>
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- ================= MENU ATAS ================= -->
+  <nav class="navbar navbar-expand-lg navbar-dark app-navbar sticky-top">
+    <div class="container-fluid px-3 px-lg-4">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#/">
+        <span class="brand-logo"><i class="bi bi-bullseye"></i></span>
+        <span><strong>e-Kinerja</strong> <small class="opacity-75 d-none d-sm-inline">Performance Management</small></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="Menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav me-auto" id="navMenu"></ul>
+        <ul class="navbar-nav align-items-lg-center gap-lg-2">
+          <li class="nav-item"><span class="badge rounded-pill text-bg-light periode-pill"><i class="bi bi-calendar3"></i> Periode <span id="navPeriode"></span></span></li>
+          <li class="nav-item dropdown" id="navNotif"></li>
+          <li class="nav-item dropdown" id="navUser"></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container-fluid px-3 px-lg-4 py-4" id="app"></main>
+
+  <footer class="text-center small text-muted pb-4">Mockup e-Kinerja · Modul Perencanaan Kinerja · data contoh (dummy)</footer>
+
+  <!-- Modal generik -->
+  <div class="modal fade" id="appModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="appModalTitle"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body" id="appModalBody"></div>
+        <div class="modal-footer" id="appModalFooter"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastArea"></div>
+
+  <!-- Area cetak (fallback export PDF via dialog print browser) -->
+  <div id="printArea"></div>
+
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/html2pdf/html2pdf.bundle.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
